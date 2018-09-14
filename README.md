@@ -1,6 +1,6 @@
 # Transaction
 
-La gestion des opérations dépôt et de retrait d'une société de transfert d'argent ainsi que la gestion du personnel de l'entreprise.
+AFROTRANS outil collaboratif
 
 ## Requirements Engineering
 
