@@ -19,3 +19,5 @@ L'application AFROTRANS est un système qui permet à une entreprise de gerer se
 
 5. Comptabilité : Ce dernier permet de calculer les dépenses courantes de l'entreprise, le montant total annuel des transaction ( dépôt, retrait), calculé le résultat de l'activité au cours de l'année pour ainsi determiner le chiffre d'affaire de l'entreprise.
 
+6. GED : ce module permet de faire des traitement sur des documents online (ajout de fichier, modification, edition, suppression).
+
