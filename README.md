@@ -8,6 +8,8 @@ L'application AFROTRANS est un système qui permet à une entreprise de gerer se
 
  - Expéditeur : Personne qui déposer de l'argent dans l'une des agence de l'entreprise.
  - Bénéficière : Personne qui effectue le retrait du montant déposé.
+ 
+ ### Different services of the collaborative system
 
 1. Dépôt : Cette opération consiste à enregistrer les informations de l'expéditeur (nom et prénom, numéro de téléphone, éventuellement son email), le montant de la transaction, les informations du bénéficière (nom et prénom, numéro de téléphone et éventuellement son email).
 
