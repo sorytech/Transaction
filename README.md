@@ -49,4 +49,12 @@ Le Back-End du système collaboratif est une **WEB API**, un web service de type
 - Entity Framework 6.2 
 - IIS7
 
+## Coding
+
+## Testing
+
+### Unitary tests
+
+### Integration tests
+
 
