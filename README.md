@@ -23,3 +23,15 @@ L'application AFROTRANS est un système qui permet à une entreprise de gerer se
 
 6. GED : ce module permet de faire des traitement sur des documents online (ajout de fichier, modification, edition, suppression).
 
+## Specification
+
+Les différents module de ce système collaboratif:
+
+- Service Dépôt
+- Service Retrait
+- Service Gestion de personnel
+- Service Comptable
+- Service Gestion electronique de document
+
+## Design
+
