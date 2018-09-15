@@ -43,4 +43,10 @@ L'architecture d'AFROTRANS est subdivisée en deux principales parties :
  
 ### Le Back-End
 
+Le Back-End du système collaboratif est une **WEB API**, un web service de type **REST** avec une base de données **SQL SERVER** couplé avec l'ORM **Entity FrameWork**. On utilise aussi le server **IIS** de windows pour le test.
+
+- Visual studio 2017
+- Entity Framework 6.2 
+- IIS7
+
 
