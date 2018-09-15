@@ -15,7 +15,7 @@ L'application AFROTRANS est un système qui permet à une entreprise de gerer se
 
 2. Retrait : Cette opération permet au permet au bénéficier de récupérer l'argent en présentant sa pièce d'identité et en donnant les informations concernant la trasaction à savoir la le montant de la transaction, les informations de l'expéditeur.
 
-3. Gestion du personnel : ce service permet d'enregistrer les information de l'ensemble des employés, d'effetuer la gestion des présence sur le lieux de travail ( en cas d'abscence enregistrer les motifs de cette abscence avec pièce justificatif à l'appui), mais 
+3. Gestion du personnel : ce service permet d'enregistrer les information de l'ensemble des employés, d'effetuer la gestion des présence sur le lieux de travail ( en cas d'abscence enregistrer les motifs de cette abscence avec pièce justificatif à l'appui).
 
 4. Gestion des paiement Paiement : ce service permet d'effectuer le paiement des salaires des employés en fonction du nombre effectué.
 
