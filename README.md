@@ -39,7 +39,7 @@ L'architecture d'AFROTRANS est subdivisée en deux principales parties :
 
 ### Le Front-End
 
- Pour une première phase le front-end du système collaboratif sera implementé avec du angular 6. Le choix de cette technologie est motivé par le fait qu'il soit orienté composant donc les différents modules de l'application seront complètement indépendant. De ce fait il sera possible de les réutiliser dans un autre projet. C'est une technologie prometeuse à l'avenir mais également il nous permet d'avancer plus rapidement dans le codage des fonctionnalité.
+ Pour une première phase le front-end du système collaboratif sera implementé avec le **Framework Angular 6**. Le choix de cette technologie est motivé par le fait qu'il soit orienté composant donc les différents modules de l'application seront complètement indépendant. De ce fait il sera possible de les réutiliser dans un autre projet. C'est une technologie prometeuse à l'avenir mais également il nous permet d'avancer plus rapidement dans le codage des fonctionnalité. Pour avoir une belle mise forme avec une interface ergonomique ce framework sera couplé ave **Material Design** de Google.
  
 ### Le Back-End
 
