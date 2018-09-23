@@ -1,60 +1,69 @@
-/***********creation des différentes tables de la BD ***********/
-CREATE TABLE SOCIETE   
+--############################## DROP TABLE IN DATABASE #####################################
+DROP TABLE PERSONNE;
+DROP TABLE RESPONSABLE;
+DROP TABLE CLIENT;
+DROP TABLE AGENCE;
+DROP TABLE OPERATION;
+
+
+--############################## CREAT TABLE IN DATABASE ####################################
+--################################ CREATE TABLE PERSONNE ####################################
+
+CREATE TABLE PERSONNE  
 (  
-    IdSociete char(10) NOT NULL PRIMARY KEY,   
-    NomSociete varchar(50) NOT NULL,   
-    Logo varchar(100)      
+    IdPersonne INT NOT NULL,   
+    NomPersonne varchar(50) NOT NULL,   
+    PrenomPersonne varchar(100), 
+    TelPersonne varchar(50),   
+    EmailPersonne varchar(50),
+    CONSTRAINT PK_PERSONNE PRIMARY KEY(IdPersonne)    
 );
 
-CREATE TABLE AGENCE   
-(  
-    IdAgence char(10) NOT NULL PRIMARY KEY,   
-    NomAgence varchar(50) NOT NULL,   
-    AdresseAgence varchar(100), 
-    FOREIGN KEY (IdSociete) REFERENCES SOCIETE(IdSociete)      
-);
+--################################ CREATE TABLE RESPONSABLE #################################
 
 CREATE TABLE RESPONSABLE   
 (  
-    IdResponsable char(10) NOT NULL PRIMARY KEY,   
-    NomResponsable varchar(50) NOT NULL,   
-    PrenomResponsable varchar(100), 
-    TelResponsable varchar(50),   
-    EmailResponsable varchar(50), 
-    FOREIGN KEY (IdAgence) REFERENCES AGENCE(IdAgence)      
+    IdResponsable INT NOT NULL,   
+    AdresseResponsable varchar(50), 
+    CONSTRAINT PK_RESPONSABLE PRIMARY KEY(IdResponsable),
+    CONSTRAINT FK_RESPONSABLE FOREIGN KEY (IdResponsable) REFERENCES PERSONNE(IdPersonne)      
 );
 
-CREATE TABLE EXPEDITEUR   
-(  
-    IdExpediteur char(10) NOT NULL PRIMARY KEY,   
-    NomExpediteur varchar(50) NOT NULL,   
-    PrenomExpediteur varchar(100), 
-    TelExpediteur varchar(50),   
-    EmailExpediteur varchar(50),      
+--################################ CREATE TABLE CLIENT ######################################
+
+CREATE TABLE CLIENT   
+(   
+    IdClient INT NOT NULL,  
+    CONSTRAINT PK_CLIENT PRIMARY KEY(IdClient),
+    CONSTRAINT FK_CLIENT FOREIGN KEY(IdClient) REFERENCES PERSONNE(IdPersonne),
 );
 
-CREATE TABLE BENEFICIERE  
+--################################ CREATE TABLE AGENCE ######################################
+
+CREATE TABLE AGENCE   
 (  
-    IdBeneficiere char(10) NOT NULL PRIMARY KEY,   
-    NomBeneficiere varchar(50) NOT NULL,   
-    PrenomBeneficiere varchar(100), 
-    TelBeneficiere varchar(50),   
-    EmailBeneficiere varchar(50),      
+    IdAgence INT NOT NULL,   
+    NomAgence varchar(50) NOT NULL,   
+    AdresseAgence varchar(100),
+    IdResponsable INT,
+    CONSTRAINT PK_AGENCE PRIMARY KEY(IdAgence),
+    CONSTRAINT FK_AGENCE FOREIGN KEY(IdResponsable) REFERENCES RESPONSABLE(IdResponsable)      
 );
 
-CREATE TABLE DEPOT  
-(  
-    MontantDepot int, 
-    DateDepot varchar(50) NOT NULL PRIMARY KEY,
-    FOREIGN KEY (IdAgence) REFERENCES AGENCE(IdAgence),
-    FOREIGN KEY (IdExpediteur) REFERENCES EXPEDITEUR(IdExpediteur) 
-);
+--################################ CREATE TABLE OPERATION ######################################
 
-CREATE TABLE RETRAIT  
+CREATE TABLE OPERATION  
 (  
-    MontantRetrait int, 
-    DateRetrait varchar(50) NOT NULL PRIMARY KEY,
-    FOREIGN KEY (IdAgence) REFERENCES AGENCE(IdAgence),
-    FOREIGN KEY (IdBeneficiere) REFERENCES BENEFICIERE(IdBeneficiere)    
+    IdExpediteur INT NOT NULL,  
+    IdDestinataire INT NOT NULL,  
+    DateOperation varchar(50) NOT NULL,
+    Montant INT NOT NULL, 
+    TypeOperation varchar(10) CHECK TypeOperation in ('DEPOT','RETRAIT'),
+    IdAgence INT,
+    CONSTRAINT PK_OPERATION PRIMARY KEY(IdExpediteur,IdDestinataire,DateOperation),
+    CONSTRAINT FK_EXP_OPERATION FOREIGN KEY(IdExpediteur) REFERENCES PERSONNE(IdPersonne),
+    CONSTRAINT FK_DEST_OPERATION FOREIGN KEY(IdDestinataire) REFERENCES PERSONNE(IdPersonne)
+    CONSTRAINT FK_AGENCE_OPERATION FOREIGN KEY (IdAgence) REFERENCES AGENCE(IdAgence),
+    
 );
 
