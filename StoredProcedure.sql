@@ -1,5 +1,5 @@
 /******* CREATE STORED PROCEDURE *************/
-/********** CREATE COMPANY ***********/
+/************** CREATE COMPANY ***************/
 USE AdventureWorks2012;  
 GO  
 CREATE PROCEDURE HumanResources.uspGetEmployeesTest2   
